@@ -1,0 +1,124 @@
+﻿
+.navbar {
+    background: #2d4162
+}
+
+.nav-link, .navbar-brand {
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    background: #f4f4f4;
+    color: #f97300;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    background: #fff !important;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.bg-dark {
+    background-color: #343a40 !important
+}
+
+.bg-primary {
+    background-color: #007bff !important
+}
+
+/*header style*/
+.header {
+    background-image: url("images/qtw.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+}
+
+.carousel-inner {
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    max-height: 10000px;
+    max-width: 10000px;
+}
+
+form.example input[type=text] {
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    right: 100px;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border: 1px solid grey;
+    cursor: pointer;
+    right: 100px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+    right: 100px;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+    right: 100px;
+}
+
+
+#chartdiv {
+    margin-top: 200px;
+    left: 10px;
+    right: 100px;
+    width: 100%;
+    height: 300px;
+}
+
+.description {
+    left: 20px;
+}
+
+.vertical-button-group {
+    margin-top: 60px;
+    margin-left:50px;
+}
+
+
