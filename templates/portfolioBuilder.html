@@ -1,0 +1,621 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<!--https://www.youtube.com/watch?v=4nXemE0eIuc&t=368s-->
+
+<style>
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 15px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: cornflowerblue;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: cornflowerblue;
+        cursor: pointer;
+    }
+</style>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#submitButton').click(function () {
+
+            var rawAge = $("#portBuilder #inputAge").val().trim();
+            var rawIncome = $("#portBuilder #inputIncome").val().trim();
+            var rawPlan = $("#portBuilder #inputPlan").val().trim();
+            var rawGoal = $("#portBuilder #inputGoal").val().trim();
+
+            var age = parseInt(rawAge)
+            var income = parseInt(rawIncome)
+
+            if (age >= 18 && age <= 25 && rawIncome != "" && rawPlan != "" && rawGoal != "") {
+                if (rawPlan == "LessThanAYear") {
+                    if (rawGoal == "HighGrowth") {
+
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 35],
+                                ['Small Company Stocks', 30],
+                                ['Real Estate Stocks', 5],
+                                ['Junk Bonds', 5],
+                                ['Crypto', 10],
+                                ['Emerging Market Stocks', 15]
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'Aggressive High Growth (Short Term)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+
+                    }
+
+                    if (rawGoal == "StableGrowth") {
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 45],
+                                ['Small Company Stocks', 15],
+                                ['Real Estate Stocks', 10],
+                                ['Junk Bonds', 10],
+                                ['Corporate Bonds', 10],
+                                ['Emerging Market Stocks', 10]
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'Stable Growth (Short Term)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+                    }
+
+                    if (rawGoal == "ConsGrowth") {
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 20],
+                                ['Small Company Stocks', 20],
+                                ['Real Estate Stocks', 15],
+                                ['Corporate Bonds', 20],
+                                ['Government Bonds', 20],
+                                ['Emerging Market Stocks', 5]
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'Conservative Growth (Short Term)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+                    }
+
+                    if (rawGoal == "PassiveIncome") {
+
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 10],
+                                ['High Dividend ETFs', 25],
+                                ['REITs', 35],
+                                ['High Yield Corporate Bonds', 20],
+                                ['Government Bonds', 10]
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'High Passive Income (Short Term)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+                    }
+                }
+
+                if (rawPlan == "1-2Years") {
+                    if (rawGoal == "HighGrowth") {
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 15],
+                                ['Small Company Stocks', 40],
+                                ['REITs', 5],
+                                ['Crypto', 10],
+                                ['Junk Bonds', 10],
+                                ['Emerging Market Stocks', 20],
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'Aggressive High Growth (1 - 2 Years)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+                    }
+
+                    if (rawGoal == "StableGrowth") {
+                        google.charts.load('current', { 'packages': ['corechart'] });
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        // Draw the chart and set the chart values
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Portfolio Allocation', '% of Portfolio'],
+                                ['Large Company Stocks', 40],
+                                ['Small Company Stocks', 15],
+                                ['REITs', 10],
+                                ['Crypto', 5],
+                                ['Junk Bonds', 10],
+                                ['Government Bonds', 10],
+                                ['Emerging Market Stocks', 10],
+                            ]);
+
+                            // Optional; add a title and set the width and height of the chart
+                            var options = { 'title': 'Stable Growth (1 - 2 Years)', 'width': 650, 'height': 500 };
+
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                            chart.draw(data, options);
+                        }
+                    }
+                }
+
+                /*
+                google.charts.load('current', { 'packages': ['corechart'] });
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Draw the chart and set the chart values
+                function drawChart()
+                {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Portfolio Allocation', '% of Portfolio'],
+                        ['Large Company Stocks', 40],
+                        ['Small Company Stocks', 30],
+                        ['Real Estate Stocks', 5],
+                        ['Junk Bonds', 5],
+                        ['Crypto', 10],
+                        ['Emerging Market Stocks', 10]
+                    ]);
+
+                    var data = google.visualization.arrayToDataTable(portfolio);
+
+                    // Optional; add a title and set the width and height of the chart
+                    var options = { 'title': 'Aggressive (High Risk)', 'width': 650, 'height': 500 };
+
+                    // Display the chart inside the <div> element with id="piechart"
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(data, options);
+                }
+                */
+
+            }
+
+            $('#output').html(result);
+
+        });
+    });
+
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<h1 style="font-family: Calibri; position: absolute; left:300px; top: 100px">Personalized Portfolio Builder</h1>
+
+<form>
+
+    <div class="container" id="portBuilder" style="margin-top: 100px; margin-left: 75px">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="inputAge">What is your age?</label>
+                <input type="text" class="form-control" id="inputAge" style="width: 300px" placeholder="" value="" required>
+
+                <div id="validAge">
+
+                </div>
+
+                <div id="invalidAge" style="color:crimson">
+
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="inputIncome">What is your yearly income?</label>
+                <input type="text" class="form-control" id="inputIncome" placeholder="" value="" required>
+
+                <div class="valid-tooltip">
+
+                </div>
+
+                <div id="invalidIncome" style="color:crimson">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-3" style="margin-top: 20px">
+
+                <label for="inputPlan">How long do you plan to invest your money?</label>
+
+                <select class="custom-select" id="inputPlan" style="height:40px; width: 300px; font-size: 13px" required>
+                    <option value="">Select...</option>
+                    <option value="LessThanAYear">Less than a year</option>
+                    <option value="1-2Years">1 - 2 years</option>
+                    <option value="2-5Years">2 - 5 years</option>
+                    <option value="5-10Years">5 - 10 years</option>
+                    <option value="10+Years">10+ years</option>
+                </select>
+
+                <div id="invalidPlan" style="color:crimson">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-3" style="margin-left: -185px; margin-top: 20px">
+
+                <label for="inputGoal">What is your goal?</label>
+
+                <select class="custom-select" id="inputGoal" style="height:40px; width: 300px; font-size: 13px" required>
+                    <option value="">Select...</option>
+                    <option value="HighGrowth">High growth of capital</option>
+                    <option value="StableGrowth">Stable growth of capital</option>
+                    <option value="ConsGrowth">Conservative growth of capital</option>
+                    <option value="PassiveIncome">Generate passive income</option>
+                </select>
+
+                <div id="invalidGoal" style="color:crimson">
+
+                </div>
+
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="submitButton" onClick="myFunction()" style="background-color:cornflowerblue; margin-top: 40px" type="button">Submit</button>
+
+    </div>
+</form>
+
+<!--<button type="submit" class="btn btn-primary" id="submitButton" onClick="myFunction()" style="background-color:cornflowerblue; margin-top:50px; margin-left: 100px">Submit</button>-->
+
+<div id="piechart" style="position: absolute; top: 560px; left: 400px"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<p id="displayText" style="font-family: Calibri; position: absolute; left:300px; top: 500px; font-size: 18px"></p>
+<p id="displayText2" style="font-family: Calibri; position: absolute; left:300px; top: 535px; font-size: 18px"></p>
+<p id="displayText3" style="font-family: Calibri; position: absolute; left:300px; top: 1020px; font-size: 18px"></p>
+
+<div id="curve_chart" style="width: 900px; height: 500px; margin-top: 600px"></div>
+
+
+<script>
+    function myFunction() {
+        var rawAge = $("#portBuilder #inputAge").val().trim();
+        var rawIncome = $("#portBuilder #inputIncome").val().trim();
+        var rawPlan = $("#portBuilder #inputPlan").val().trim();
+        var rawGoal = $("#portBuilder #inputGoal").val().trim();
+
+        var income = parseInt(rawIncome);
+        var age = parseInt(rawAge);
+
+        var percentageOfIncome = 0.10;
+
+        if (rawAge == "")
+            document.getElementById("invalidAge").textContent = "Please provide an answer."
+        else if (isNaN(rawAge))
+            document.getElementById("invalidAge").textContent = "Please enter a valid number"
+        else
+            document.getElementById("invalidAge").textContent = ""
+
+        if (rawIncome == "")
+            document.getElementById("invalidIncome").textContent = "Please provide an answer."
+        else if (isNaN(rawIncome))
+            document.getElementById("invalidIncome").textContent = "Please enter a valid number"
+        else
+            document.getElementById("invalidIncome").textContent = ""
+
+        if (rawPlan == "")
+            document.getElementById("invalidPlan").textContent = "Please provide an answer."
+        else
+            document.getElementById("invalidPlan").textContent = ""
+
+        if (rawGoal == "")
+            document.getElementById("invalidGoal").textContent = "Please provide an answer."
+        else
+            document.getElementById("invalidGoal").textContent = ""
+
+        if (income > 0 && income < 50000)
+            percentageOfIncome = 0.10
+
+        else if (income > 0 && income < 80000)
+            percentageOfIncome = 0.125
+
+        else if (income > 0 && income < 100000)
+            percentageOfIncome = 0.15
+
+        else if (income >= 100000)
+            percentageOfIncome = 0.20
+
+        var investingPerMonth = Math.round(income / 12 * percentageOfIncome);
+        var investingPerYear = investingPerMonth * 12;
+
+        if (rawAge != "" && rawIncome != "" && rawPlan != "" && rawGoal != "")
+        {
+            document.getElementById("invalidAge").textContent = ""
+            document.getElementById("displayText").textContent = "Based on your yearly income of $" + income.toLocaleString('en') + ", you should be investing around $" + investingPerMonth.toLocaleString('en') + " per month, or $" + investingPerYear.toLocaleString('en') + " per year."
+            document.getElementById("displayText2").textContent = "Here is what your portfolio should look like:"
+            document.getElementById("displayText3").textContent = "Here's a projection of your investments over time:"
+
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            document.getElementById("slider").style.display = "block";
+            document.getElementById("slider2").style.display = "block";
+
+            document.getElementById("myRange").value = investingPerMonth
+            document.getElementById("myRange2").value = 5
+
+            output.innerHTML = investingPerMonth;
+            output2.innerHTML = 5;
+
+            function drawChart()
+            {
+                var rawAge = $("#portBuilder #inputAge").val().trim();
+                var rawIncome = $("#portBuilder #inputIncome").val().trim();
+                var income = parseInt(rawIncome);
+                var age = parseInt(rawAge);
+
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+
+                var percentageOfIncome = 0.10;
+
+                if (income > 0 && income < 50000)
+                    percentageOfIncome = 0.10
+
+                else if (income > 0 && income < 80000)
+                    percentageOfIncome = 0.125
+
+                else if (income > 0 && income < 100000)
+                    percentageOfIncome = 0.15
+
+                else if (income >= 100000)
+                    percentageOfIncome = 0.20
+
+                var investingPerMonth = Math.round(income / 12 * percentageOfIncome);
+
+                document.getElementById("myRange").min = investingPerMonth / 3
+                document.getElementById("myRange").max = investingPerMonth * 3
+                document.getElementById("myRange").value = investingPerMonth
+
+                document.getElementById("myRange2").min = 0
+                document.getElementById("myRange2").max = 20
+                document.getElementById("myRange2").value = 5
+
+                output.innerHTML = investingPerMonth;
+                output2.innerHTML = '5%';
+
+                var invYearly = investingPerMonth * 12;
+                var yearlyGrowth = 8;
+
+                var arr = [['Year', 'Total Investment Value'],
+                ['2019', invYearly * Math.pow(1.08, 1)],
+                ['2020', invYearly * 2 * Math.pow(1.08, 2)],
+                ['2021', invYearly * 3 * Math.pow(1.08, 3)],
+                ['2022', invYearly * 4 * Math.pow(1.08, 4)],
+                ['2023', invYearly * 5 * Math.pow(1.08, 5)],
+                ['2024', invYearly * 6 * Math.pow(1.08, 6)],
+                ['2025', invYearly * 7 * Math.pow(1.08, 7)],
+                ['2026', invYearly * 8 * Math.pow(1.08, 8)],
+                ['2027', invYearly * 9 * Math.pow(1.08, 9)],
+                ['2028', invYearly * 10 * Math.pow(1.08, 10)],
+                ['2029', invYearly * 11 * Math.pow(1.08, 11)],
+                ['2030', invYearly * 12 * Math.pow(1.08, 12)]];
+
+                var data = google.visualization.arrayToDataTable(arr);
+
+                var options =
+                {
+                    title: 'Hypothetical Projection of Investments',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart.draw(data, options);
+
+                slider.oninput = function ()
+                {
+                    var arr = [['Year', 'Total Investment Value'],
+                    ['2019', invYearly * Math.pow(1.08, 1)],
+                    ['2020', invYearly * 2 * Math.pow(1.08, 2)],
+                    ['2021', invYearly * 3 * Math.pow(1.08, 3)],
+                    ['2022', invYearly * 4 * Math.pow(1.08, 4)],
+                    ['2023', invYearly * 5 * Math.pow(1.08, 5)],
+                    ['2024', invYearly * 6 * Math.pow(1.08, 6)],
+                    ['2025', invYearly * 7 * Math.pow(1.08, 7)],
+                    ['2026', invYearly * 8 * Math.pow(1.08, 8)],
+                    ['2027', invYearly * 9 * Math.pow(1.08, 9)],
+                    ['2028', invYearly * 10 * Math.pow(1.08, 10)],
+                    ['2029', invYearly * 11 * Math.pow(1.08, 11)],
+                    ['2030', invYearly * 12 * Math.pow(1.08, 12)]];
+
+                    output.innerHTML = Math.round(this.value);
+                    invYearly = Math.round(this.value) * 12;
+
+                    var data = google.visualization.arrayToDataTable(arr);
+
+                    var options =
+                    {
+                        title: 'Hypothetical Projection of Investments',
+                        curveType: 'function',
+                        legend: { position: 'bottom' }
+                    };
+
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                    chart.draw(data, options);
+                }
+
+                slider2.oninput = function ()
+                {
+                    output2.innerHTML = this.value.toString() + '%';
+
+                    var arr = [['Year', 'Total Investment Value'],
+                        ['2019', invYearly * Math.pow(1 + (yearlyGrowth / 100), 1)],
+                        ['2020', invYearly * 2 * Math.pow(1 + (yearlyGrowth / 100), 2)],
+                        ['2021', invYearly * 3 * Math.pow(1 + (yearlyGrowth / 100), 3)],
+                        ['2022', invYearly * 4 * Math.pow(1 + (yearlyGrowth / 100), 4)],
+                        ['2023', invYearly * 5 * Math.pow(1 + (yearlyGrowth / 100), 5)],
+                        ['2024', invYearly * 6 * Math.pow(1 + (yearlyGrowth / 100), 6)],
+                        ['2025', invYearly * 7 * Math.pow(1 + (yearlyGrowth / 100), 7)],
+                        ['2026', invYearly * 8 * Math.pow(1 + (yearlyGrowth / 100), 8)],
+                        ['2027', invYearly * 9 * Math.pow(1 + (yearlyGrowth / 100), 9)],
+                        ['2028', invYearly * 10 * Math.pow(1 + (yearlyGrowth / 100), 10)],
+                        ['2029', invYearly * 11 * Math.pow(1 + (yearlyGrowth / 100), 11)],
+                        ['2030', invYearly * 12 * Math.pow(1 + (yearlyGrowth / 100), 12)]];
+
+                    output2.innerHTML = Math.round(this.value).toString() + '%';
+                    yearlyGrowth = Math.round(this.value);
+
+                    var data = google.visualization.arrayToDataTable(arr);
+
+                    var options =
+                    {
+                        title: 'Hypothetical Projection of Investments',
+                        curveType: 'function',
+                        legend: { position: 'bottom' }
+                    };
+
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                    chart.draw(data, options);
+                }
+
+            }
+
+        }
+        
+    }
+</script>
+
+
+<div class="slidecontainer" id="slider" style="display: none; margin-top: 30px; width: 600px; margin-left: 150px">
+    <input type="range" min="" max="" value="" class="slider" id="myRange">
+    <p style="margin-top: 20px">Investing Per Month: $<span id="demo"></span></p>
+</div>
+
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
+</script>
+
+<div class="slidecontainer" id="slider2" style="display: none; margin-top: 50px; width: 600px; margin-left: 150px">
+    <input type="range" min="" max="" value="" class="slider" id="myRange2">
+    <p style="margin-top: 20px">Yearly Growth: <span id="demo2"></span></p>
+</div>
+
+<script>
+    var slider2 = document.getElementById("myRange2");
+    var output2 = document.getElementById("demo2");
+    output2.innerHTML = slider2.value;
+
+    slider2.oninput = function () {
+        output2.innerHTML = this.value;
+    }
+</script>
+
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+
+<div id="output"></div>
+
+{% endblock content %}

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d22de5a04.js"></script>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="top: 0px; height: 70px">
+        <div class="qLogo">
+            <img src="static/images/quantexlogo.jpg" width="50" height="50" alt="Quantex Logo">
+        </div>
+        <!-- <a class="navbar-brand" href="index.html">Home</a> -->
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item">
+                    <a class="nav-link" data-value="Home" style="font-family: Calibri" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-value="About" style="font-family: Calibri" href="{{ url_for('about') }}">About</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" style="font-family: Calibri" aria-expanded="false">
+                        Getting Started
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" style="height: 32px; line-height: 25px">What are Stocks?</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" style="height: 32px; line-height: 25px">Why Invest?</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('bestInvestingApps') }}" style="height: 32px; line-height: 25px">Best Investing Apps</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('portfolioBuilder') }}" style="height: 32px; line-height: 25px">Personal Portfolio Builder</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Research" style="font-family: Calibri" href="{{ url_for('research') }}">Research</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" style="font-family: Calibri" aria-expanded="false">
+                        Strategies
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('portfolioConstruction') }}" style="height: 32px; line-height: 25px">Portfolio Construction</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('howToPickGreatStocks') }}" style="height: 32px; line-height: 25px">How to Pick Great Stocks</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('bestInvestingApps') }}" style="height: 32px; line-height: 25px">When to Buy or Sell</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('gs') }}" style="height: 32px; line-height: 25px">Long vs Short Term</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('gs') }}" style="height: 32px; line-height: 25px">Algorithmic Trading</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Risk Management" style="font-family: Calibri" href="{{ url_for('rm') }}">Risk Management</a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="example" method="get" action="about.html" style="max-width:300px; margin-top: 4px">
+            <input type="text" style="font-family: Calibri; font-size: 15px; right: 300px" placeholder="Search.." name="search2">
+            <button type="submit" style="height: 32px; margin-top: 0.5px; right: 200px"><i class="fa fa-search"></i></button>
+        </form>
+
+        <div class="btn-group-vertical" style="left: -1250px; top: 130px; height: 150%">
+
+            <a href="{{ url_for('portfolioConstruction') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Portfolio Construction</a>
+            <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default show active" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">How to Pick Great Stocks</a>
+            <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">When to Buy or Sell</a>
+            <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Long vs Short Term</a>
+            <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Algorithmic Trading</a>
+
+        </div>
+
+        <h1 style="font-family: Calibri; position: absolute; left:300px; top: 100px">How to Pick Great Stocks</h1>
+
+        <div class="info">
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 180px ">Finding the best stocks to invest in can be very difficult at times, considering the hundreds of thousands of companies to</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 205px ">choose from. However, when focusing on key financial metrics and fundamentals, it is easy to filter out the good stocks from the bad.</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 260px ">The four main categories to look at when analyzing a stock are profitability, valuation, growth, and performance. Investing in companies</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 285px ">that are strong in all four categories is the key to long term success. Companies that are underwhelming in any category pose a risk</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 310px ">that should be accounted for, however, it could still turn out to be a good investment.</p1>
+        </div>
+
+        <div class="financial-metrics">
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 385px ">Key Profitability Metrics:</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 415px ">- Net Margin</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 440px ">- Operating Margin</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 465px ">- Return on Equity</p1>
+
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 520px ">Key Valuation Metrics:</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 550px ">- Price to Earnings Ratio</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 575px ">- Price to Sales Ratio</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 600px ">- Price to Earnings Growth Ratio</p1>
+
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 655px ">Key Growth Metrics:</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 685px ">- Revenue Growth Y/Y</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 710px ">- EPS Growth Y/Y</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 735px ">- Working Capital Growth Y/Y</p1>
+
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 790px ">Key Performance Metrics:</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 820px ">- 1 Year Change (%)</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 845px ">- 3 Month Change (%)</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:820px; top: 870px ">- 6 Month Change (%)</p1>
+        </div>
+
+        <div class="info-2">
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1050px">Finding stocks that are in good standings for all four categories can be very difficult, it would be it much easier to look at one</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1075px">numerical rating to judge whether a stock is good to invest in or not. Using an equation I developed which incorporates all the key</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1100px">financial metrics for a company, I was able to form a singular number which represents the overall rating for the stock.</p1>
+            <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1150px">These are the top stocks based on their overall rating. They are ranked based on their valuation, profitability, growth, and performance metrics.</p1>
+        </div>
+
+    </nav>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="margin-left: 300px; margin-top: 310px">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Fundamental Data</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+            {
+                "symbol": "NASDAQ:AAPL",
+                    "colorTheme": "light",
+                        "isTransparent": false,
+                            "largeChartUrl": "",
+                                "displayMode": "regular",
+                                    "width": "480",
+                                        "height": "630",
+                                            "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="table-responsive">
+            <div id="stock_table" style="margin-top:200px;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+       
+            $.ajax({
+
+                url: "static/stkRatings.csv",
+                dataType: "text",
+                success: function (data) {
+
+                    var stock_data = data.split(/\r?\n|\r/);
+                    var table_data = '<table class="table table-bordered table-striped">';
+
+                    for (var count = 0; count < stock_data.length; count++)
+                    {
+                        var cell_data = stock_data[count].split(",");
+
+                        table_data += '<tr>';
+
+                        for (var cell_count = 0; cell_count < cell_data.length; cell_count++)
+                        {
+                            if (count === 0)
+                            {
+                                table_data += '<th>' + cell_data[cell_count] + '</th>';
+                            }
+                            else
+                            {
+                                table_data += '<td>' + cell_data[cell_count] + '</td>';
+                            }
+                        }
+
+                        table_data += '</tr>';
+                    }
+
+                    table_data += '</table>';
+                    $('#stock_table').html(table_data);
+                }
+            });
+       
+
+    });
+</script>

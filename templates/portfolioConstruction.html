@@ -1,0 +1,150 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+
+<div class="btn-group-vertical" style="margin-left: -130px; margin-top: 13px; height: 150%">
+    
+    <a href="{{ url_for('portfolioConstruction') }}" class="btn btn-default show active" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Portfolio Construction</a>
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">How to Pick Great Stocks</a>
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">When to Buy or Sell</a>
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Long vs Short Term</a>
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Algorithmic Trading</a>
+
+</div>
+
+<div class="description">
+    <h1 style="font-family: Calibri; position: absolute; left:300px; top: 100px">Portfolio Construction</h1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 180px ">Having the right portfolio allocation is essential for meeting your financial goals. Make sure to construct your</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 205px ">portfolio based on your risk tolerance and time horizon, as risk is directly correlated to performance. </p1>
+</div>
+
+<div class="container" style="margin:0;padding:0; top: 300px">
+
+    <div id="piechart" style="position: absolute; top: 250px; left: 270px"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Portfolio Allocation', '% of Portfolio'],
+                ['Large Company Stocks', 40],
+                ['Small Company Stocks', 30],
+                ['Real Estate Stocks', 5],
+                ['Junk Bonds', 5],
+                ['Crypto', 10],
+                ['Emerging Market Stocks', 10]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = { 'title': 'Aggressive (High Risk)', 'width': 650, 'height': 500 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+
+    <div id="piechart2" style="position: absolute; top: 250px; left: 840px"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data2 = google.visualization.arrayToDataTable([
+                ['Portfolio Allocation', '% of Portfolio'],
+                ['Large Company Stocks', 45],
+                ['Small Company Stocks', 20],
+                ['Real Estate Stocks', 10],
+                ['Junk Bonds', 5],
+                ['Corporate Bonds', 5],
+                ['Crypto', 5],
+                ['Emerging Market Stocks', 10]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options2 = { 'title': 'Moderately Aggressive (Fair Risk)', 'width': 650, 'height': 500 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart2.draw(data2, options2);
+        }
+    </script>
+
+
+    <div id="piechart3" style="position: absolute; top: 680px; left: 270px"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data3 = google.visualization.arrayToDataTable([
+                ['Portfolio Allocation', '% of Portfolio'],
+                ['Large Company Stocks', 40],
+                ['Small Company Stocks', 5],
+                ['Real Estate Stocks', 10],
+                ['Government Bonds', 20],
+                ['Corporate Bonds', 20],
+                ['Emerging Market Stocks', 5]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options3 = { 'title': 'Moderate (Low Risk)', 'width': 650, 'height': 500 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+            chart3.draw(data3, options3);
+        }
+    </script>
+
+
+    <div id="piechart4" style="position: absolute; top: 680px; left: 840px"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data4 = google.visualization.arrayToDataTable([
+                ['Portfolio Allocation', '% of Portfolio'],
+                ['Large Company Stocks', 25],
+                ['Small Company Stocks', 5],
+                ['Real Estate Stocks', 5],
+                ['Government Bonds', 30],
+                ['Commodities', 5],
+                ['Corporate Bonds', 25],
+                ['Emerging Market Stocks', 5]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options4 = { 'title': 'Moderately Conservative (Minimal Risk)', 'width': 650, 'height': 500 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart4 = new google.visualization.PieChart(document.getElementById('piechart4'));
+            chart4.draw(data4, options4);
+        }
+    </script>
+
+
+</div>
+
+{% endblock content %}

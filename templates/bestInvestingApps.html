@@ -1,0 +1,214 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+
+<div class="btn-group-vertical" style="margin-left: -130px; margin-top: 13px; height: 150%">
+
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">What are Stocks?</a>
+    <a href="{{ url_for('howToPickGreatStocks') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Why Invest?</a>
+    <a href="{{ url_for('bestInvestingApps') }}" class="btn btn-default show active" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Best Investing Apps</a>
+    <a href="{{ url_for('portfolioBuilder') }}" class="btn btn-default" style="font-family: Calibri; font-size: 16px; line-height: 30px; height: 45px">Personal Portfolio Builder</a>
+</div>
+
+<div class="description">
+    <h1 style="font-family: Calibri; position: absolute; left:300px; top: 100px">Best Investing Apps</h1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 180px ">In the past, investing in the stock market was something only high net-worth individuals can do and required having a</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 205px ">stock broker. However, with the emergence of FinTech companies in the last decade, investing has never been more simple.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 230px ">Nowadays, all someone needs to invest in stocks is money to spare and a smartphone. There are multiple apps</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 255px ">anyone can download to help reach their financial goals. Here are a few apps that can help you start investing for free.</p1>
+</div>
+
+<div class="description">
+    <h1 style="font-family: Calibri; position: absolute; left:300px; top: 300px">Acorns</h1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 380px ">Acorns is the perfect app for passive or new investors, or people who do not have the time to pick individual stocks to invest in.</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 405px ">The app is very simple, for every purchase you make with a linked credit or debit card, Acorns rounds the purchase up to the next</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 430px ">dollar and invests it for you in a diversifed portfolio of assets that you choose.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 475px ">For example, if you buy a cup of coffee for $2.60, Acorns takes the 40 cents left over and invests it in your account. Even though</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 500px ">it seems like a small amount of money, you would be surprised by how fast your money grows, especially if you make a ton of purchases.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 545px ">Apart from the round-ups feature, Acorns allows you to setup recurring investments, so you can transfer any amount of money every day,</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 570px; z-index: 3; ">week, or month. It is the perfect way to save money without even thinking about it. Click <a href="https://www.acorns.com/"> here </a> to learn more about Acorns.</p1>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -700px">
+    <!-- Indicators -->
+    <div class="carousel-inner">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="item active">
+            <img src="static/images/acornsGraphic1.jpg" alt="Slide 1">
+        </div>
+
+        <div class="item">
+            <img src="static/images/acornsGraphic2.jpg" alt="Slide 2">
+        </div>
+
+        <div class="item">
+            <img src="static/images/acornsGraphic3.jpg" alt="Slide 3">
+        </div>
+
+        <div class="item">
+            <img src="static/images/acornsGraphic4.jpg" alt="Slide 4">
+        </div>
+
+        <div class="item">
+            <img src="static/images/acornsGraphic5.jpg" alt="Slide 5">
+        </div>
+
+
+        <div class="arrows">
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="description">
+    <h1 style="font-family: Calibri; position: absolute; left:300px; top: 1250px">Stash</h1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1330px">Stash is very similar to Acorns, but it is more customizable and interactive. It is recommended for people who have some investing</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1355px">experience and understand how the stock market works. Stash has the same round-up feature as Acorns, and allows you to transfer any</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1380px">amount of money every week or month.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1425px">Stash allows you to buy fractional shares of a stock, eliminating the need to gain enough capital to purchase full shares of a stock.</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1450px">It also allows you to purchase select ETFs for a certain category such as blue chip or conservative stocks, for instant diversification.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1495px">Stash also features a section where you can read about the economy and for general financial advice. The app also recommends you stocks</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1520px">you should consider adding to your portfolio. With the Stash Debit Card, you can also earn "Stock-Back" from certain diners and venues.</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 1545px; z-index: 3;">Click <a href="https://www.stashinvest.com/"> here </a> to learn more about Stash.</p1>
+</div>
+
+
+<div id="myCarousel2" class="carousel slide" data-ride="carousel2" style="margin-top: 395px">
+    <!-- Indicators -->
+    <div class="carousel-inner">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel2" data-slide-to="1"></li>
+            <li data-target="#myCarousel2" data-slide-to="2"></li>
+            <li data-target="#myCarousel2" data-slide-to="3"></li>
+            <li data-target="#myCarousel2" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="item active">
+            <img src="static/images/stashGraphic1.jpg" alt="Slide 1">
+        </div>
+
+        <div class="item">
+            <img src="static/images/stashGraphic2.jpg" alt="Slide 2">
+        </div>
+
+        <div class="item">
+            <img src="static/images/stashGraphic3.jpg" alt="Slide 3">
+        </div>
+
+        <div class="item">
+            <img src="static/images/stashGraphic4.jpg" alt="Slide 4">
+        </div>
+
+        <div class="item">
+            <img src="static/images/stashGraphic5.jpg" alt="Slide 5">
+        </div>
+
+
+        <div class="arrows">
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="description">
+    <h1 style="font-family: Calibri; position: absolute; left:300px; top: 2200px">Robinhood</h1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2280px">Robinhood is geared towards millenials who have a general understanding of the stock market and are looking to invest without the burden of</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2305px">commission fees. Because every trade you make on Robinhood is free, you end up saving thousands of dollars over time by avoiding those costs.</p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2350px">Robinhood allows you to invest in stocks, ETFs, and certain cryptocurrencies. This is the greatest benefit of Robinhood, as there are very</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2375px">few apps that allow users to invest in all 3 under the same platform. Robinhood also has a free stock program, where you can get a variety of</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2400px">stocks for free for referring a friend, up to $500. </p1>
+
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2445px">With Robinhood, you can view the average price other Robinhood users paid for all stocks and their analyst ratings. Robinhood Gold gives you</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2470px">get access to in-depth research from MorningStar and Level II Market Data from NASDAQ for $10 a month. It also large instant deposits, so you</p1>
+    <p1 style="font-family: Calibri; font-size: 17px; position: absolute; left:300px; top: 2495px; z-index: 3;">do not have to wait 3 days for your money to transfer to your Robinhood account. Click <a href="https://robinhood.com/"> here </a> to learn more about Robinhood.</p1>
+</div>
+
+
+
+<div id="myCarousel3" class="carousel slide" data-ride="carousel3" style="margin-top: 400px">
+    <!-- Indicators -->
+    <div class="carousel-inner">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel3" data-slide-to="1"></li>
+            <li data-target="#myCarousel3" data-slide-to="2"></li>
+            <li data-target="#myCarousel3" data-slide-to="3"></li>
+            <li data-target="#myCarousel3" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="item active">
+            <img src="static/images/robinhoodGraphic1.jpg" alt="Slide 1">
+        </div>
+
+        <div class="item">
+            <img src="static/images/robinhoodGraphic2.jpg" alt="Slide 2">
+        </div>
+
+        <div class="item">
+            <img src="static/images/robinhoodGraphic3.jpg" alt="Slide 3">
+        </div>
+
+        <div class="item">
+            <img src="static/images/robinhoodGraphic4.jpg" alt="Slide 4">
+        </div>
+
+        <div class="item">
+            <img src="static/images/robinhoodGraphic5.jpg" alt="Slide 5">
+        </div>
+
+
+        <div class="arrows">
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#myCarousel3" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="description" style="margin-top: 150px">
+    <p></p>
+</div>
+
+{% endblock content %}

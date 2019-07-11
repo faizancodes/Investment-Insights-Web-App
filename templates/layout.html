@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d22de5a04.js"></script>
+
+    <!-- navbar -->
+
+    
+    <nav class="navbar navbar-expand-lg fixed-top" style="top: -20px">
+        <div class="qLogo">
+            <img src="static/images/quantexlogo.jpg" width="50" height="50" alt="Quantex Logo">
+        </div>
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-value="Home" style="font-family: Calibri" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-value="About" style="font-family: Calibri" href="{{ url_for('about') }}">About</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Getting Started" style="font-family: Calibri" href="{{ url_for('bestInvestingApps') }}">Getting Started</a>
+                </li>
+                -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" style="font-family: Calibri" aria-expanded="false">
+                        Getting Started
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" style="height: 32px; line-height: 25px">What are Stocks?</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" style="height: 32px; line-height: 25px">Why Invest?</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('bestInvestingApps') }}" style="height: 32px; line-height: 25px">Best Investing Apps</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('portfolioBuilder') }}" style="height: 32px; line-height: 25px">Personal Portfolio Builder</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Research" style="font-family: Calibri" href="{{ url_for('research') }}">Research</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Strategies" style="font-family: Calibri" href="{{ url_for('portfolioConstruction') }}">Strategies</a>
+                </li>
+                -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" style="font-family: Calibri" aria-expanded="false">
+                        Strategies
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('portfolioConstruction') }}" style="height: 32px; line-height: 25px">Portfolio Construction</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('howToPickGreatStocks') }}" style="height: 32px; line-height: 25px">How to Pick Great Stocks</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('bestInvestingApps') }}" style="height: 32px; line-height: 25px">When to Buy or Sell</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('gs') }}" style="height: 32px; line-height: 25px">Long vs Short Term</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ url_for('gs') }}" style="height: 32px; line-height: 25px">Algorithmic Trading</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-value="Risk Management" style="font-family: Calibri" href="{{ url_for('rm') }}">Risk Management</a>
+                </li>
+            </ul>
+        </div>
+
+    
+
+
+        <form class="example" method="get" action="about.html" style="max-width:300px; margin-top: 10px">
+            <input type="text" style="font-family: Calibri; font-size: 15px" placeholder="Search.." name="search2">
+            <button type="submit" style="height: 32px;margin-top: 0.5px"><i class="fa fa-search"></i></button>
+        </form>
+
+    </nav>
+
+    {% block tickertape %} {% endblock %}
+
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            {% block content %} {% endblock %}
+
+        </div>
+
+    </header>
+
+    <script type="text/javascript" src='js/main.js'></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
