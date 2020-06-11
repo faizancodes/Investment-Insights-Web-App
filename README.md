@@ -1,7 +1,9 @@
 # Investment Insights Web App
 A web application that provides an array of financial advice.
 
-To run the app, clone the repository `https://github.com/faizancodes/Investment-Insights-Web-App.git` and run `flaskHome.py`
+To run the app:
+ - Clone the repository `https://github.com/faizancodes/Investment-Insights-Web-App.git` 
+ - Run `flaskHome.py`
 
 # Features 
  
