@@ -15,6 +15,7 @@ To run the app:
  - Interactive Graphing Tool 
  - Stock Screener 
 
+# Screenshots 
 
 ![Image 4](https://user-images.githubusercontent.com/43652410/84344264-50e79180-ab78-11ea-8985-f5421b4f00ec.jpg)
 
