@@ -11,4 +11,4 @@ To run the app, clone the repository `https://github.com/faizancodes/Investment-
  - Algorithmic Trading Strategies 
  - Insights on Investing Apps 
  - Interactive graphing tool 
- - Stock Ccreener 
+ - Stock Screener 
