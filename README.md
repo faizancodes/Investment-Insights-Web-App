@@ -12,3 +12,6 @@ To run the app, clone the repository `https://github.com/faizancodes/Investment-
  - Insights on Investing Apps 
  - Interactive Graphing Tool 
  - Stock Screener 
+
+
+![web app ss](https://user-images.githubusercontent.com/43652410/84343732-044f8680-ab77-11ea-8260-5ce949b566a7.png)
